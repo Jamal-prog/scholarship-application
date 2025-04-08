@@ -9,6 +9,7 @@ body {
     background-color: #f9f9f9;
     color: #000;
     line-height: 1.6;
+    padding-top: 50px; /* To prevent content from being hidden behind the nav bar */
 }
 
 .container {
@@ -120,3 +121,44 @@ footer {
     .carousel-button:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
+
+/* Style for the navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px 15px;
+            }
+
+                nav ul li a:hover {
+                    background-color: #555;
+                    border-radius: 5px;
+                }
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
