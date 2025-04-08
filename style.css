@@ -9,7 +9,7 @@ body {
     background-color: #f9f9f9;
     color: #000;
     line-height: 1.6;
-    padding-top: 50px; /* To prevent content from being hidden behind the nav bar */
+    padding-top: 70px; /* To prevent content from being hidden behind the nav bar */
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
 header {
     background: #e60000;
     color: white;
-    padding: 40px 0;
+    padding: 40px 0 40px;
     text-align: center;
 }
 
@@ -161,4 +161,110 @@ nav {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Apply Now Section Styles */
+.apply {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+    .apply .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+.apply-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Reduced padding to fit content */
+    margin-top: 20px;
+    max-height: 800px; /* Added max-height to ensure it fits */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.apply h2 {
+    font-size: 1.8rem; /* Adjusted font size */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.apply form {
+    display: block;
+    width: 100%;
+}
+
+    .apply form label {
+        margin-bottom: 8px; /* Reduced margin */
+        font-weight: bold;
+        display: block;
+    }
+
+    .apply form input,
+    .apply form textarea,
+    .apply form button {
+        width: 100%;
+        padding: 10px; /* Reduced padding */
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 15px; /* Reduced margin for a more compact layout */
+        font-size: 1rem;
+    }
+
+    .apply form textarea {
+        resize: vertical;
+        height: 100px; /* Limit the height of textareas */
+    }
+
+    .apply form button {
+        background-color: #e60000;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 1.1rem; /* Adjusted button font size */
+    }
+
+        .apply form button:hover {
+            background-color: #b30000;
+        }
+
+    .apply form p {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .apply form input[type="file"] {
+        padding: 10px;
+        background-color: #fafafa;
+        border: 1px solid #ccc;
+    }
+
+/* Word count display */
+#word-count {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Ensure no margin or padding issues for forms */
+.apply form * {
+    margin: 0;
+    padding: 0;
+}
+
+/* To ensure good spacing for smaller devices */
+@media (max-width: 600px) {
+    .apply-card {
+        padding: 15px; /* Reduced padding for mobile */
+    }
+
+    .apply form button {
+        font-size: 1rem;
+    }
+
+    .apply form input,
+    .apply form textarea {
+        padding: 8px;
+    }
 }

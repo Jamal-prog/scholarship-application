@@ -28,7 +28,16 @@
 </head>
 <body>
 
-    <header>
+    <!-- Fixed Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#container">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#apply">Apply Now</a></li>
+        </ul>
+    </nav>
+
+    <header id="container">
         <div class="container">
             <h1>Never Give Up On Your Dreams Scholarship 2025</h1>
             <p>
@@ -50,7 +59,7 @@
         </div>
     </header>
 
-    <section class="about">
+    <section id="about">
         <div class="container">
             <h2>About the Scholarship</h2>
             <img src="pic1.jpg" alt="Scholarship image" style="max-width: 300px; width: 100%; margin: 20px auto;" />
@@ -65,33 +74,37 @@
         </div>
     </section>
 
-    <section class="apply">
+    <section id="apply">
         <div class="container">
             <h2>Apply Now</h2>
-            <form id="application-form" action="https://formsubmit.co/shirleybcolescholarship@gmail.com" method="POST" enctype="multipart/form-data">
-                <!-- Hidden inputs for FormSubmit settings -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="thank-you.html">
+            <div class="apply-card">
+                <form id="application-form" action="https://formsubmit.co/shirleybcolescholarship@gmail.com" method="POST" enctype="multipart/form-data">
+                    <!-- Hidden inputs for FormSubmit settings -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="thank-you.html">
 
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Why should we choose you?</label>
-                <textarea id="message" name="message" rows="5" required oninput="countWords()"></textarea>
-                <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
-
-                <label for="message">Explain your community involement and goals after graduation?</label>
-                <textarea id="message" name="message" rows="5" required oninput="countWords()"></textarea>
-                <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
-
-                <label for="resume">Upload Resume</label>
-                <input type="file" id="resume" name="resume">
-
-                <button type="submit" id="submit-btn">Submit Application</button>
-            </form>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <label for="message">Why should we choose you?</label>
+                    <br><br>
+                    <textarea id="message" name="message" rows="5" required oninput="countWords()"></textarea>
+                    <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
+                    <br><br>
+                    <label for="community">Explain your community involvement and goals after graduation?</label>
+                    <br>
+                    <textarea id="community" name="community" rows="5" required oninput="countWords()"></textarea>
+                    <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
+                    <br><br>
+                    <label for="resume">Upload Resume</label>
+                    <input type="file" id="resume" name="resume">
+                    <br>
+                    <button type="submit" id="submit-btn">Submit Application</button>
+                </form>
+            </div>
         </div>
     </section>
 
