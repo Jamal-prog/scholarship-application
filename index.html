@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scholarship Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function countWords() {
+            var textarea = document.getElementById('message');
+            var wordCountDisplay = document.getElementById('word-count');
+            var wordCount = textarea.value.trim().split(/\s+/).length;
+
+            // If there's no text, reset to 0
+            if (textarea.value.trim() === '') {
+                wordCount = 0;
+            }
+
+            // Limit word count to 500
+            if (wordCount > 500) {
+                wordCount = 500;
+                textarea.value = textarea.value.split(/\s+/).slice(0, 500).join(' '); // Truncate to 500 words
+            }
+
+            wordCountDisplay.innerText = `Word Count: ${wordCount} / 500`;
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Never Give Up On Your Dreams Scholarship 2025</h1>
+            <p>
+                Shirley Cole was an influential leader and worked as a director for CMSD food service department. Her family wishes to honor local high school students doing excellent work with $500. As a non-traditional college graduate, she was determined to never give up on her dreams.
+            </p>
+
+            <!-- Image Carousel -->
+            <div class="carousel-container">
+                <button class="carousel-button prev" onclick="prevImage()">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="pic1.jpg" alt="Scholarship image 1" class="carousel-image" />
+                    <img src="pic2.jpg" alt="Scholarship image 2" class="carousel-image" />
+                    <img src="pic3.jpg" alt="Scholarship image 3" class="carousel-image" />
+                    <img src="pic4.jpg" alt="Scholarship image 4" class="carousel-image" />
+                </div>
+                <button class="carousel-button next" onclick="nextImage()">&#10095;</button>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>About the Scholarship</h2>
+            <img src="pic1.jpg" alt="Scholarship image" style="max-width: 300px; width: 100%; margin: 20px auto;" />
+            <ul>
+                <li>The <strong>Never Give Up On Your Dreams Scholarship</strong> is open to high school seniors.</li>
+                <li>Applicants must demonstrate academic excellence and community involvement.</li>
+                <li>Must be a <strong>Clarksdale High School Senior Graduate</strong>.</li>
+                <li>Minimum <strong>3.0 cumulative GPA</strong> required.</li>
+                <li><strong>Application Deadline:</strong> May 8th</li>
+                <li><strong>Award Amount:</strong> $500</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="apply">
+        <div class="container">
+            <h2>Apply Now</h2>
+            <form id="application-form" action="https://formsubmit.co/jhawkins0425@gmail.com" method="POST" enctype="multipart/form-data">
+                <!-- Hidden inputs for FormSubmit settings -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="thank-you.html">
+
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Why should we choose you?</label>
+                <textarea id="message" name="message" rows="5" required oninput="countWords()"></textarea>
+                <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
+
+                <label for="message">Explain your community involement and goals after graduation?</label>
+                <textarea id="message" name="message" rows="5" required oninput="countWords()"></textarea>
+                <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
+
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" name="resume">
+
+                <button type="submit" id="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shirley B. Cole Scholarship</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
