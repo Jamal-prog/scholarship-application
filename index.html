@@ -48,6 +48,7 @@
             <div class="carousel-container">
                 <button class="carousel-button prev" onclick="prevImage()">&#10094;</button>
                 <div class="carousel-images">
+                    <img src="Cert1.jpg" alt="Certificate image 1" class="carousel-image" />
                     <img src="pic1.jpg" alt="Scholarship image 1" class="carousel-image" />
                     <img src="pic2.jpg" alt="Scholarship image 2" class="carousel-image" />
                     <img src="pic3.jpg" alt="Scholarship image 3" class="carousel-image" />
@@ -78,32 +79,39 @@
         <div class="container">
             <h2>Apply Now</h2>
             <div class="apply-card">
-                <form id="application-form" action="https://formsubmit.co/shirleybcolescholarship@gmail.com" method="POST" enctype="multipart/form-data">
-                    <!-- Hidden inputs for FormSubmit settings -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="thank-you.html">
+                <!-- Application Closed Notice -->
+                <p style="font-size: 1.2em; color: red; font-weight: bold;">
+                    We are no longer accepting applications at this time.
+                </p>
 
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                    <br><br>
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                    <br><br>
-                    <label for="message">Why should we choose you?</label>
-                    <br><br>
-                    <textarea id="message" name="message" rows="5" required oninput="countWords()"></textarea>
-                    <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
-                    <br><br>
-                    <label for="community">Explain your community involvement and goals after graduation?</label>
-                    <br>
-                    <textarea id="community" name="community" rows="5" required oninput="countWords()"></textarea>
-                    <p id="word-count">Word Count: 0 / 250</p> <!-- Display word count -->
-                    <br><br>
-                    <label for="resume">Upload Resume</label>
-                    <input type="file" id="resume" name="resume">
-                    <br>
-                    <button type="submit" id="submit-btn">Submit Application</button>
-                </form>
+                <!-- Disabled form (commented out) -->
+                <!--
+            <form id="application-form" action="https://formsubmit.co/shirleybcolescholarship@gmail.com" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="thank-you.html">
+
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="message">Why should we choose you?</label>
+                <br><br>
+                <textarea id="message" name="message" rows="5" required oninput="countWords()"></textarea>
+                <p id="word-count">Word Count: 0 / 250</p>
+                <br><br>
+                <label for="community">Explain your community involvement and goals after graduation?</label>
+                <br>
+                <textarea id="community" name="community" rows="5" required oninput="countWords()"></textarea>
+                <p id="word-count">Word Count: 0 / 250</p>
+                <br><br>
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" name="resume">
+                <br>
+                <button type="submit" id="submit-btn">Submit Application</button>
+            </form>
+            -->
             </div>
         </div>
     </section>
